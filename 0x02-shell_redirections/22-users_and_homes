@@ -1,2 +1,2 @@
 #!/bin/bash
-while IFS=: read -r username _ homedir; do echo "User: $username, Home Directory: $homedir"; done < /etc/passwd | so
+cat /etc/passwd | cut -d: -f1,6 | sort
